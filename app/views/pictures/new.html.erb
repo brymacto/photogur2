@@ -1,0 +1,24 @@
+<h1>New photo</h1>
+
+
+
+<%= form_for :picture, url: pictures_path  do |f| %>
+  <div class="form_field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="form_field">
+    <%= f.label :artist %><br>
+    <%= f.text_field :artist %>
+  </div>
+
+  <div class="form_field">
+    <%= f.label :url %><br>
+    <%= f.text_field :url %>
+  </div>
+
+  <div class="form_field">
+    <%= f.submit %>
+  </div>
+<% end %>
