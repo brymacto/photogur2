@@ -1,5 +1,14 @@
-<h1>New photo</h1>
-<%= link_to "Back to Pictures", pictures_url %>
+<nav>
+<ul>
+<li><a href="/">Home</a></li>
+<li><%= link_to "New Picture", "/pictures/new" %></li>
+</ul>
+</nav>
+
+<h2>New photo</h2>
+
+
+
 
 
 <%= render 'form' %>
