@@ -1,0 +1,14 @@
+.form_field {
+  margin-bottom: 1em;
+}
+
+.form_field label {
+  color: #F9760A;
+}
+
+input[type=text] {
+  width: 100%;
+  font-size:1.1em;
+  padding:10px;
+  margin-top:10px;
+}
