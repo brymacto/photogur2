@@ -1,6 +1,11 @@
 <h1>Photogur</h1>
 <%= link_to "New Picture", "/pictures/new" %>
+<div class="album">
 <% @pictures.each do |picture| %>
-  <p><%= picture.title %>, <%= picture.artist %></p>
+  <div class="picwrapper">
+  <div class="caption"><%= picture.title %>, <%= picture.artist %></div>
   <%= link_to image_tag(picture.url), "/pictures/#{picture.id}" %>
+
+  </div>
 <% end %>
+</div>
