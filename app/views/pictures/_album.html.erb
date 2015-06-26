@@ -1,0 +1,24 @@
+<nav>
+<ul>
+<li><a href="/">Home</a></li>
+<li><a href="/all">All Photos</a></li>
+<li><%= link_to "New Picture", "/pictures/new" %></li>
+</ul>
+</nav>
+
+
+<h2>Photo Album<% if @pictures == Picture.most_recent_six %>: Newest photos
+<% else %>: All photos<% end %> </h2>
+
+
+<section class="album">
+<% @pictures.each do |picture| %>
+  <article class="picwrapper">
+  <div class="caption"><%= picture.title %>, <%= picture.artist %></div>
+  <%= link_to image_tag(picture.url), "/pictures/#{picture.id}" %>
+
+  </article>
+<% end %>
+
+
+</section>

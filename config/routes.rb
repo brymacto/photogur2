@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 root 'pictures#index'
 resources :pictures
 
+get 'all' => 'pictures#all'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -1,7 +1,14 @@
 class PicturesController < ApplicationController
 
   def index
-    @pictures = Picture.all
+    @pictures = Picture.most_recent_six
+    @subtitle = ": six newest photos"
+    # @pictures = Picture.all
+  end
+
+  def all
+    @pictures = Picture.newest_first
+    @subtitle = ": All photos"
   end
 
   def show
